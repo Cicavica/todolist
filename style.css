@@ -9,8 +9,8 @@
     text-align: center;
 }
 
-.todo-tasks p {
-    border: 1px grey solid;
-    padding: 5px;
-    margin: 0;
-}
+.btn-sm {
+    padding: 0.05rem .15rem;
+    font-size: 0.700rem;
+    border-radius: .2rem;
+    }
