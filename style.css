@@ -13,4 +13,8 @@
     padding: 0.05rem .15rem;
     font-size: 0.700rem;
     border-radius: .2rem;
-    }
+}
+
+html {
+    overflow-y: scroll;
+}
