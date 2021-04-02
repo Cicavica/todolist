@@ -1,4 +1,5 @@
 const addTaskBtn = document.body.querySelector("#button-addon2");
+const input = document.body.querySelector("#todo-input");
 
 function addTask() {
     const inputValue = document.body.querySelector("#todo-input").value;
@@ -17,6 +18,12 @@ function addTask() {
                 </div>
             </div>`
     document.body.querySelector("#todo-tasks").appendChild(element);
+    document.body.querySelector("#todo-input").value = "";
 }
 
 addTaskBtn.addEventListener("click", addTask);
+input.addEventListener("keypress", function(e) {
+    if (e.key === 'Enter') {
+        addTask()
+    }
+});
