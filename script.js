@@ -2,7 +2,7 @@ const addTaskBtn = document.body.querySelector("#button-addon2");
 
 function addTask() {
     const inputValue = document.body.querySelector("#todo-input").value;
-    const element = document.createElement("label");
+    const element = document.createElement("li");
     element.className = "list-group-item";
     element.innerHTML = `
             <div class="d-flex align-items-center">
