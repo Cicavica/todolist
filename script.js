@@ -1,5 +1,6 @@
+//after clicking button "Add" new task is added
+
 const addTaskBtn = document.body.querySelector("#button-addon2");
-const input = document.body.querySelector("#todo-input");
 
 function addTask() {
     const inputValue = document.body.querySelector("#todo-input").value;
@@ -19,7 +20,25 @@ function addTask() {
             </div>`
     document.body.querySelector("#todo-tasks").appendChild(element);
     document.body.querySelector("#todo-input").value = "";
+    const buttonClose = element.querySelector('.btn-close');
+    buttonClose.addEventListener('click', deleteTask, false);
 }
+
+//hitting closing button deletes a task
+
+let deleteBtn = document.getElementsByClassName('btn-close');
+    
+for (let i = 0; i < deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener('click', deleteTask, false);
+}
+
+function deleteTask() {
+    this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+}
+
+//hitting enter created a new task
+
+const input = document.body.querySelector("#todo-input");
 
 addTaskBtn.addEventListener("click", addTask);
 input.addEventListener("keypress", function(e) {
