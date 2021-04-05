@@ -31,7 +31,7 @@ for (let i = 0; i < deleteBtn.length; i++) {
 }
 
 function deleteTask() {
-    this.closest('ul').removeChild(this.closest('li'))
+    this.closest('.list-group-item').remove();
 }
 
 //hitting enter creates a new task
