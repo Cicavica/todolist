@@ -1,5 +1,4 @@
 //after clicking button "Add" new task is added
-
 const addTaskBtn = document.body.querySelector("#button-addon2");
 
 function addTask() {
@@ -25,7 +24,6 @@ function addTask() {
 }
 
 //hitting closing button deletes a task
-
 let deleteBtn = document.getElementsByClassName('btn-close');
     
 for (let i = 0; i < deleteBtn.length; i++) {
@@ -33,11 +31,10 @@ for (let i = 0; i < deleteBtn.length; i++) {
 }
 
 function deleteTask() {
-    this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+    this.closest('ul').removeChild(this.closest('li'))
 }
 
-//hitting enter created a new task
-
+//hitting enter creates a new task
 const input = document.body.querySelector("#todo-input");
 
 addTaskBtn.addEventListener("click", addTask);
