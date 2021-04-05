@@ -1,6 +1,9 @@
 //contants
 const KEYPRESS_ENTER = 13
 
+// state variables
+let lastEditedTaskButton = undefined;
+
 //after clicking button "Add" new task is added
 const addTaskBtn = document.body.querySelector("#button-addon2");
 
@@ -13,7 +16,7 @@ function addTask() {
                 <div class="me-auto">
                     <input class="form-check-input me-2" type="checkbox" value="">
                 </div>
-                <div class="flex-grow-1">
+                <div class="flex-grow-1 task-name">
                     ${inputValue}
                 </div>
                 <div><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button></div>
@@ -46,3 +49,19 @@ todoInput.addEventListener("keypress", function(e) {
         addTask()
     }
 });
+
+//editing tasks
+const editTaskModal = document.getElementById('editTaskModal')
+editTaskModal.addEventListener('show.bs.modal', function (event) {
+  const eventButton = event.relatedTarget;
+  lastEditedTaskButton = eventButton;
+  const originalTaskText = lastEditedTaskButton.closest('.list-group-item').getElementsByClassName('task-name')[0].innerText;
+  const modalBodyInput = editTaskModal.querySelector('.modal-body textarea');
+  modalBodyInput.value = originalTaskText;
+});
+
+const saveChangesButton= document.body.querySelector('#saveChangesButton')
+saveChangesButton.addEventListener('click', function() {
+    const editedTaskText = document.body.querySelector('textarea').value;
+    lastEditedTaskButton.closest('.list-group-item').getElementsByClassName('task-name')[0].innerText = editedTaskText;
+})
