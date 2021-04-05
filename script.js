@@ -16,7 +16,7 @@ function addTask() {
                 <div class="flex-grow-1">
                     ${inputValue}
                 </div>
-                <div><button class="btn btn-outline-primary btn-sm ms-2">edit</button></div>
+                <div><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button></div>
                 <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
                 </div>
             </div>`

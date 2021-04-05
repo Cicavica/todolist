@@ -16,3 +16,8 @@
 html {
     overflow-y: scroll;
 }
+
+/* opening modal will not shift page */
+.modal-open {
+    padding-right: 0 !important;
+}
