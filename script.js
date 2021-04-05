@@ -1,3 +1,6 @@
+//contants
+const KEYPRESS_ENTER = 13
+
 //after clicking button "Add" new task is added
 const addTaskBtn = document.body.querySelector("#button-addon2");
 
@@ -35,11 +38,11 @@ function deleteTask() {
 }
 
 //hitting enter creates a new task
-const input = document.body.querySelector("#todo-input");
+const todoInput = document.body.querySelector("#todo-input");
 
 addTaskBtn.addEventListener("click", addTask);
-input.addEventListener("keypress", function(e) {
-    if (e.key === 'Enter') {
+todoInput.addEventListener("keypress", function(e) {
+    if (e.keyCode === KEYPRESS_ENTER) {
         addTask()
     }
 });
