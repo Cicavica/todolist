@@ -42,6 +42,8 @@ function addTask() {
         newTask.querySelector('.task-name').innerText = inputValue
         const buttonClose = newTask.querySelector('.btn-close');
         buttonClose.addEventListener('click', deleteTask, false);
+        const checkbox = newTask.querySelector('.form-check-input');
+        checkbox.addEventListener('click', taskDone, false);
         document.body.querySelector("#todo-tasks").appendChild(newTask);
         document.body.querySelector("#todo-input").value = "";
     }
