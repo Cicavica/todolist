@@ -32,3 +32,8 @@ html {
 .modal-open {
     padding-right: 0 !important;
 }
+
+.checkedTask {
+    text-decoration: line-through;
+    background-color: rgb(161, 161, 161);
+}

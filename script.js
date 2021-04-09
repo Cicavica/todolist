@@ -68,6 +68,17 @@ todoInput.addEventListener("keypress", function (e) {
     }
 });
 
+//checking checkboxes to mark task as done
+let checkboxes = document.getElementsByClassName('form-check-input');
+
+for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener('click', taskDone, false);
+}
+
+function taskDone() {
+    this.closest('.list-group-item').classList.toggle("checkedTask");
+}
+
 //editing tasks
 const editTaskModal = document.getElementById('editTaskModal')
 editTaskModal.addEventListener('show.bs.modal', function (event) {
