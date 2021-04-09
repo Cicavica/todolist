@@ -23,14 +23,14 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Add a task..." aria-label="Add a task"
                         aria-describedby="button-addon2" id="todo-input">
-                    <button class="btn btn-primary" type="button" id="button-addon2">Add</button>
+                    <button class="btn btn-primary" type="button" id="buttonAddTask">Add</button>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="todo-tasks col">
                 <ul class="list-group" id="todo-tasks">
-                    <li class="list-group-item hidden">
+                    <li class="list-group-item hidden" id="exampleTask">
                         <div class="d-flex align-items-center">
                             <div class="me-auto">
                                 <input class="form-check-input me-2" type="checkbox" value="">
@@ -127,6 +127,28 @@
                 </ul>
             </div>
         </div>
+        <!-- modal -->
+        <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editTaskModal">Edit a task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Task:</label>
+                            <textarea class="form-control" id="message-text" style="height: 150px"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            id="saveChangesButton">Save changes</button>
+                    </div>
+                </div>
+            </div> 
+        </div>    
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
