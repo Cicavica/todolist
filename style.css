@@ -24,6 +24,10 @@ html {
     overflow-y: scroll;
 }
 
+.hidden {
+    display: none;
+}
+
 /* opening modal will not shift page */
 .modal-open {
     padding-right: 0 !important;

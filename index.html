@@ -30,17 +30,22 @@
         <div class="row">
             <div class="todo-tasks col">
                 <ul class="list-group" id="todo-tasks">
-                    <li class="list-group-item">
+                    <li class="list-group-item hidden">
                         <div class="d-flex align-items-center">
                             <div class="me-auto">
                                 <input class="form-check-input me-2" type="checkbox" value="">
                             </div>
                             <div class="flex-grow-1 task-name">
-                               Wash the dishes
+                                Empty
                             </div>
-                            <div class=""><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#editTaskModal" id='editBtn'>edit</button></div>
-                            <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
+                            <div>
+                                <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#editTaskModal">
+                                    edit
+                                </button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn-close btn-sm ms-2"></button>
                             </div>
                         </div>
                     </li>
@@ -52,9 +57,14 @@
                             <div class="flex-grow-1 task-name">
                                 Take out the trash
                             </div>
-                            <div class=""><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#editTaskModal">edit</button></div>
-                            <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
+                            <div>
+                                <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#editTaskModal">
+                                    edit
+                                </button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn-close btn-sm ms-2"></button>
                             </div>
                         </div>
                     </li>
@@ -66,9 +76,14 @@
                             <div class="flex-grow-1 task-name">
                                 Visit grandma
                             </div>
-                            <div class=""><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#editTaskModal">edit</button></div>
-                            <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
+                            <div>
+                                <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#editTaskModal">
+                                    edit
+                                </button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn-close btn-sm ms-2"></button>
                             </div>
                         </div>
                     </li>
@@ -80,9 +95,13 @@
                             <div class="flex-grow-1 task-name">
                                 Take the dog for a walk
                             </div>
-                            <div class=""><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#editTaskModal">edit</button></div>
-                            <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
+                            <div>
+                                <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#editTaskModal">
+                                    edit
+                                </button>
+                            </div>
+                            <div><button type="button" class="btn-close btn-sm ms-2"></button>
                             </div>
                         </div>
                     </li>
@@ -95,34 +114,17 @@
                                 Buy in the shop: 6 bananas, 500g ground beef meat, tin of tomato paste, 500g spaghetti,
                                 block of cheese, 3 big tomatoes, 1 carrot, garlic, onion, italian spices and some snacks
                             </div>
-                            <div class=""><button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#editTaskModal">edit</button></div>
-                            <div class="bd-highlight"><button type="button" class="btn-close btn-sm ms-2"></button>
+                            <div>
+                                <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#editTaskModal">
+                                    edit
+                                </button>
+                            </div>
+                            <div><button type="button" class="btn-close btn-sm ms-2"></button>
                             </div>
                         </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editTaskModal">Edit a task</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Task:</label>
-                                <textarea class="form-control" id="message-text" style="height: 150px"></textarea>
-                            </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveChangesButton">Save changes</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
